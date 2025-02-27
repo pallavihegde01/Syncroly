@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-pink-200 min-h-screen">
       {/* Header */}
@@ -19,12 +21,12 @@ const HeroSection = () => {
           <a href="#" className="text-black pt-2">
             Features
           </a>
-          <a
-            href="#"
+          <button
+            onClick={() => navigate("/AuthForm")}
             className="px-4 py-2 bg-pink-200 border-2 border-black rounded-full text-black"
           >
             Get Started
-          </a>
+          </button>
         </nav>
       </header>
 
